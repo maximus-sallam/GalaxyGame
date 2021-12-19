@@ -3,6 +3,11 @@ from kivy.uix.button import Button
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.widget import Widget
+from kivy.uix.gridlayout import GridLayout
+
+
+class GridLayoutExample(GridLayout):
+    pass
 
 
 class AnchorLayoutExample(AnchorLayout):
