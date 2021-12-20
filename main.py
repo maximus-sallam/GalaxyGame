@@ -14,11 +14,24 @@ from kivy.uix.stacklayout import StackLayout
 class WidgetExample(GridLayout):
     counter = 0
     my_text = StringProperty("Hello!")
+    count_enabled = False
 
     def on_button_click(self):
         print("Button clicked")
-        self.my_text = str(self.counter)
-        self.counter += 1
+        if self.count_enabled:
+            self.my_text = str(self.counter)
+            self.counter += 1
+        else:
+            pass
+
+    def on_toggle_button_state(self, widget):
+        print("toggle state: " + widget.state)
+        if widget.state == "normal":
+            widget.text = "OFF"
+            self.count_enabled = False
+        else:
+            widget.text = "ON"
+            self.count_enabled = True
 
 
 class StackLayoutExample(StackLayout):
