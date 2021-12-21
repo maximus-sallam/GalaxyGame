@@ -2,7 +2,7 @@
 
 from kivy.app import App
 from kivy.metrics import dp
-from kivy.properties import StringProperty
+from kivy.properties import StringProperty, BooleanProperty
 from kivy.uix.button import Button
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.boxlayout import BoxLayout
@@ -14,7 +14,7 @@ from kivy.uix.stacklayout import StackLayout
 class WidgetExample(GridLayout):
     counter = 0
     my_text = StringProperty("Hello!")
-    count_enabled = False
+    count_enabled = BooleanProperty(False)
 
     def on_button_click(self):
         print("Button clicked")
