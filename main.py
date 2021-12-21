@@ -1,5 +1,4 @@
 
-
 from kivy.app import App
 from kivy.metrics import dp
 from kivy.properties import StringProperty, BooleanProperty
@@ -12,7 +11,7 @@ from kivy.uix.stacklayout import StackLayout
 
 
 class WidgetExample(GridLayout):
-    counter = 0
+    counter = 1
     my_text = StringProperty("Hello!")
     count_enabled = BooleanProperty(False)
 
