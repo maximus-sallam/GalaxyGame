@@ -35,6 +35,9 @@ class WidgetExample(GridLayout):
     def on_switch_active(self, widget):
         print("Switch:", str(widget.active))
 
+    def on_slider_value(self, widget):
+        print("Slider:", int(widget.value))
+
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
